@@ -22,7 +22,7 @@ namespace IntroAlgorithmPerformance
             var instance = Activator.CreateInstance(type, size);
             stopwatch.Stop();
             var spent = stopwatch.ElapsedMilliseconds / 1000.0;
-            Console.WriteLine($"Brukte {spent} sekunder\n");
+            Console.WriteLine($"Brukte {spent} sekunder");
             return (T)instance;
         }
 
