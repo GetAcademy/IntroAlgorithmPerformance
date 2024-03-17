@@ -2,21 +2,34 @@
 
 namespace IntroAlgorithmPerformance
 {
-    internal class DemoRunner
+    internal abstract class DemoRunner
     {
-        public static void Run(Action<int> action, params int[] values)
-        {
-            var stopwatch = new Stopwatch();
+        private static readonly Stopwatch Stopwatch = new Stopwatch();
+        public int Value { get; }
 
-            foreach (var value in values)
+        protected static void RunDemoes(IEnumerable<DemoRunner> demos)
+        {
+            foreach (var demo in demos)
             {
-                Console.WriteLine($"Start N={value}");
-                stopwatch.Start();
-                action(value);
-                stopwatch.Stop();
-                var spent = stopwatch.ElapsedMilliseconds / 1000.0;
-                Console.WriteLine($"Brukte {spent:F} sekunder");
+                demo.RunAndMeasure(); 
             }
         }
+
+        protected DemoRunner(int value)
+        {
+            Value = value;
+        }
+
+        public void RunAndMeasure()
+        {
+            Console.WriteLine($"Start N={Value}");
+            Stopwatch.Start();
+            Run();
+            Stopwatch.Stop();
+            var spent = Stopwatch.ElapsedMilliseconds / 1000.0;
+            Console.WriteLine($"Brukte {spent:F} sekunder");
+        }
+
+        protected abstract void Run();
     }
 }
