@@ -1,12 +1,12 @@
-﻿namespace IntroAlgorithmPerformance._01_Constant_O_1_
+﻿namespace IntroAlgorithmPerformance
 {
-    internal class Demo01 : DemoRunner
+    internal class Demo1constant : DemoRunner
     {
 
         public static void Start()
         {
-            var nValues = new[] {1000, 10000, 100000};
-            var demos = nValues.Select(n => new Demo01(n));
+            var nValues = new[] { 1000, 10000, 100000 };
+            var demos = nValues.Select(n => new Demo1constant(n));
             RunDemoes(demos);
         }
 
@@ -17,7 +17,7 @@
 
         private readonly RandomIntList _randomIntList;
 
-        public Demo01(int size) : base(size) 
+        public Demo1constant(int size) : base(size)
         {
             _randomIntList = new RandomIntList(size);
         }

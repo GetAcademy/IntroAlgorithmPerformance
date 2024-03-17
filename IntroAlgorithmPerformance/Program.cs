@@ -1,4 +1,4 @@
-﻿using IntroAlgorithmPerformance._01_Constant_O_1_;
+﻿using IntroAlgorithmPerformance;
 
-Console.WriteLine("Hello, World!");
-Demo01.Start();
+//Demo1constant.Start();
+Demo2linear.Start();
