@@ -11,11 +11,7 @@
 
         protected override void Run()
         {
-            var found5 = false;
-            foreach (var number in _randomIntList)
-            {
-                if (number == 5) found5 = true;
-            }
+            var found5 = _randomIntList.Contains(5);
         }
 
         private readonly RandomSortedIntList _randomIntList;
