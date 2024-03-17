@@ -21,13 +21,12 @@ namespace IntroAlgorithmPerformance
 
         public void RunAndMeasure()
         {
-            var stopwatch = new Stopwatch();
-            Console.WriteLine($"Start N={Value}");
-            stopwatch.Start();
+            var stopwatch = Stopwatch.StartNew();
+            Console.Write($"Start N={Value:n0}".PadRight(30));
             Run();
             stopwatch.Stop();
             var spent = stopwatch.ElapsedMilliseconds / 1000.0;
-            Console.WriteLine($"Brukte {spent:F} sekunder");
+            Console.WriteLine($"Brukte {spent} sekunder");
         }
 
         protected abstract void Run();
