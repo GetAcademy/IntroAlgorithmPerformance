@@ -1,11 +1,11 @@
 ﻿namespace IntroAlgorithmPerformance
 {
-    internal class Demo2linear : DemoRunner
+    internal class Demo4logarithmic : DemoRunner
     {
         public static void Start()
         {
-            var nValues = new[] { 10000000, 100000000, 1000000000 };
-            var demos = nValues.Select(Create<Demo2linear>);
+            var nValues = new[] { 100000, 1000000, 10000000 };
+            var demos = nValues.Select(Create<Demo4logarithmic>);
             RunDemoes(demos);
         }
 
@@ -18,11 +18,11 @@
             }
         }
 
-        private readonly RandomIntList _randomIntList;
+        private readonly RandomSortedIntList _randomIntList;
 
-        public Demo2linear(int size) : base(size)
+        public Demo4logarithmic(int size) : base(size)
         {
-            _randomIntList = new RandomIntList(size);
+            _randomIntList = new RandomSortedIntList(size);
         }
     }
 }

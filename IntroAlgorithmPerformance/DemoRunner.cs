@@ -8,10 +8,22 @@ namespace IntroAlgorithmPerformance
 
         protected static void RunDemoes(IEnumerable<DemoRunner> demos)
         {
-            foreach (var demo in demos)
+            foreach (var demo in demos.ToArray())
             {
                 demo.RunAndMeasure(); 
             }
+        }
+
+        protected static T Create<T>(int size)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            var type = typeof(T);
+            Console.Write($"Lager {type.Name} - størrelse: {size} ");
+            var instance = Activator.CreateInstance(type, size);
+            stopwatch.Stop();
+            var spent = stopwatch.ElapsedMilliseconds / 1000.0;
+            Console.WriteLine($"Brukte {spent} sekunder\n");
+            return (T)instance;
         }
 
         protected DemoRunner(int size)

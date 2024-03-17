@@ -5,7 +5,7 @@
         public static void Start()
         {
             var nValues = new[] { 100, 1000, 10000};
-            var demos = nValues.Select(n => new Demo3quadric(n));
+            var demos = nValues.Select(Create<Demo3quadric>);
             RunDemoes(demos);
         }
 
