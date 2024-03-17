@@ -1,4 +1,5 @@
 ﻿using IntroAlgorithmPerformance;
 
 //Demo1constant.Start();
-Demo2linear.Start();
+//Demo2linear.Start();
+Demo3quadric.Start();
