@@ -21,8 +21,8 @@ namespace IntroAlgorithmPerformance
             Console.Write($"Lager {type.Name} - størrelse: {size} ");
             var instance = Activator.CreateInstance(type, size);
             stopwatch.Stop();
-            var spent = stopwatch.ElapsedMilliseconds / 1000.0;
-            Console.WriteLine($"Brukte {spent} sekunder");
+            var spent = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine($"Brukte {spent:n0} millisekunder");
             return (T)instance;
         }
 
