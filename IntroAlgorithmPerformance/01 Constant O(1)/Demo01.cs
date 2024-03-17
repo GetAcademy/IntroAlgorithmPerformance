@@ -15,7 +15,7 @@
             _randomIntList[_randomIntList.Count / 2]++;
         }
 
-        private RandomIntList _randomIntList;
+        private readonly RandomIntList _randomIntList;
 
         public Demo01(int size) : base(size) 
         {

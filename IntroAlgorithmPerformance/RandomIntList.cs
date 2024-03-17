@@ -7,7 +7,7 @@
             var random = new Random();
             for (int i = 0; i < size; i++)
             {
-                this[i] = random.Next();
+                Insert(i, random.Next());
             }
         }
     }
