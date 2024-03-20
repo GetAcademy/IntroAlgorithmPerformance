@@ -4,7 +4,7 @@
     {
         public static void Start()
         {
-            var nValues = new[] { 100000, 1000000, 10000000 };
+            var nValues = new[] { 10000000};
             var demos = nValues.Select(Create<Demo4logarithmic>);
             RunDemoes(demos);
         }
