@@ -1,5 +1,11 @@
 Mål: 
  - Kunne bruke ressursene på nett til å lære mer om dette
+ - "how algorithms' run time or space requirements grow as the input size grows"
+	
+Plan: 
+ - Forklare demo-koden
+ - Fire eksempler
+ - Artikler
 
 https://medium.com/@DevChy/introduction-to-big-o-notation-time-and-space-complexity-f747ea5bca58
 

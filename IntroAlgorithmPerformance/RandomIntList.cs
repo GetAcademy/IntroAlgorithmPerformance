@@ -5,9 +5,9 @@
         public RandomIntList(int size) : base(size)
         {
             var random = new Random();
-            for (int i = 0; i < size; i++)
+            for (var i = 0; i < size; i++)
             {
-                Insert(i, random.Next());
+                Add(random.Next());
             }
         }
     }

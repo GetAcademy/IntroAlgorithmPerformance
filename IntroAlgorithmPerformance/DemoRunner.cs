@@ -21,7 +21,7 @@ namespace IntroAlgorithmPerformance
             Console.Write($"Lager {type.Name} ({size:n0}) ");
             var instance = Activator.CreateInstance(type, size);
             stopwatch.Stop();
-            var seconds = stopwatch.ElapsedMilliseconds / 1000;
+            var seconds = stopwatch.ElapsedMilliseconds/ 1000;
             Console.WriteLine($"Brukte {seconds:n0} sekunder");
             return (T)instance;
         }
@@ -37,8 +37,8 @@ namespace IntroAlgorithmPerformance
             Console.Write($"Start N={Size:n0}".PadRight(30));
             Run();
             stopwatch.Stop();
-            var spent = stopwatch.ElapsedMilliseconds / 1000.0;
-            Console.WriteLine($"Brukte {spent} sekunder");
+            var spent = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine($"Brukte {spent:n0} millisekunder");
         }
 
         protected abstract void Run();

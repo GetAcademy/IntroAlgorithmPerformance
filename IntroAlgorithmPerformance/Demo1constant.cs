@@ -5,7 +5,7 @@
 
         public static void Start()
         {
-            var nValues = new[] { 1000, 10000, 100000 };
+            var nValues = new[] { 1000000, 10000000, 100000000 };
             var demos = nValues.Select(Create<Demo1constant>);
             RunDemoes(demos);
         }
