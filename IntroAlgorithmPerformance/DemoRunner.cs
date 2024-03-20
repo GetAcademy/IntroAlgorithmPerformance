@@ -18,11 +18,11 @@ namespace IntroAlgorithmPerformance
         {
             var stopwatch = Stopwatch.StartNew();
             var type = typeof(T);
-            Console.Write($"Lager {type.Name} - størrelse: {size} ");
+            Console.Write($"Lager {type.Name} ({size:n0}) ");
             var instance = Activator.CreateInstance(type, size);
             stopwatch.Stop();
-            var spent = stopwatch.ElapsedMilliseconds;
-            Console.WriteLine($"Brukte {spent:n0} millisekunder");
+            var seconds = stopwatch.ElapsedMilliseconds / 1000;
+            Console.WriteLine($"Brukte {seconds:n0} sekunder");
             return (T)instance;
         }
 
